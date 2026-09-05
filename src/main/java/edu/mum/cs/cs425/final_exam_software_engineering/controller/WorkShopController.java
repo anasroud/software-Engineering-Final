@@ -59,7 +59,7 @@ public class WorkShopController {
         return ResponseEntity.ok(registrationService.registerWorkShop(id, registration));
     }
 
-    @PostMapping("/{id}/registations")
+    @GetMapping("/{id}/registations")
     public ResponseEntity<List<Registration>> getRegistrations(@PathVariable Long id) {
         return ResponseEntity.ok(registrationService.findAllByWorkShop(id));
     }
